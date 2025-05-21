@@ -6,8 +6,6 @@ A Retrieval-Augmented Generation (RAG) chatbot built with **LangChain** that lev
 
 ## Features
 
-Got it! Here's an expanded **Features** section you can add to your README to better highlight your chatbot’s capabilities:
-
 ---
 
 ### Features
