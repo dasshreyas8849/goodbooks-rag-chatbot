@@ -20,14 +20,5 @@ A Retrieval-Augmented Generation (RAG) chatbot built with **LangChain** that lev
 
 
 Access the live app at:  
-[https://share.streamlit.io/your_username/goodbooks-rag-chatbot/main/streamlit_app.py](https://share.streamlit.io/your_username/goodbooks-rag-chatbot/main/streamlit_app.py)
+https://goodbooks-rag-chatbot.streamlit.app/
 
----
-
-## Installation
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/your-username/goodbooks-rag-chatbot.git
-   cd goodbooks-rag-chatbot
