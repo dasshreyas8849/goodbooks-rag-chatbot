@@ -3,7 +3,7 @@
 import streamlit as st
 from langchain_community.vectorstores import FAISS
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_community.chains import RetrievalQA
+from langchain.chains.retrieval_qa import RetrievalQA
 from dotenv import load_dotenv
 
 # Load environment variables
