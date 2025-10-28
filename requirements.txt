@@ -1,8 +1,11 @@
-langchain
-langchain-community
-langchain-openai
-openai
+langchain==0.3.25
+langchain-core>=0.3.25
+langchain-community>=0.3.25
+langchain-openai>=0.3.4
+langchain-text-splitters>=0.3.0
+openai>=1.47.0
+streamlit>=1.39.0
 faiss-cpu
-pandas
 tiktoken
+PyPDF2
 python-dotenv
