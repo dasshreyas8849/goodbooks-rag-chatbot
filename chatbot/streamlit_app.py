@@ -1,14 +1,13 @@
 # chatbot/streamlit_app.py
+import os
+import streamlit as st
 from dotenv import load_dotenv
-from langchain_community.vectorstores import FAISS
-from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain.chains.retrieval import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+from langchain.chat_models import ChatOpenAI
 from langchain.chains import RetrievalQA
 
-import os
-# Load environment variables
+# Load environment
 load_dotenv()
 
 # Load vectorstore
@@ -17,6 +16,8 @@ vectorstore = FAISS.load_local(
     OpenAIEmbeddings(),
     allow_dangerous_deserialization=True
 )
+
+# Setup retriever + model
 retriever = vectorstore.as_retriever()
 llm = ChatOpenAI(temperature=0)
 qa_chain = RetrievalQA.from_chain_type(llm=llm, retriever=retriever)
@@ -26,7 +27,6 @@ st.set_page_config(page_title="📚 BookBot", page_icon="📖")
 st.title("📚 BookBot")
 st.write("Ask anything about books in the Goodbooks-10k dataset!")
 
-# Input box
 user_question = st.text_input("🔎 Ask a question:")
 
 if user_question:
